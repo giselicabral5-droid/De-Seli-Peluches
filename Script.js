@@ -1,121 +1,121 @@
+// VARIABLES
 const carrito = document.getElementById('carrito');
-const elementos1 = document.getElementById('lista-1');
-const elementos2 = document.getElementById('lista-2');
-const lista = document.querySelector('#lista-carrito tbody');
-const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+const listaCarrito = document.querySelector('#lista-carrito tbody');
+const vaciarBtn = document.getElementById('vaciar-carrito');
 
-cargarEventListeners();
+const lista1 = document.getElementById('lista-1');
+const lista2 = document.getElementById('lista-2');
 
-function cargarEventListeners() {
+// EVENTOS
+document.addEventListener('DOMContentLoaded', () => {
 
     // Productos del index
-    if (elementos1) {
-        elementos1.addEventListener('click', comprarElemento);
+    if (lista1) {
+        lista1.addEventListener('click', agregarProducto);
     }
 
-    // Productos de Productos.html
-    if (elementos2) {
-        elementos2.addEventListener('click', comprarElemento);
+    // Productos de productos.html
+    if (lista2) {
+        lista2.addEventListener('click', agregarProducto);
     }
 
     // Eliminar productos
     if (carrito) {
-        carrito.addEventListener('click', eliminarElemento);
+        carrito.addEventListener('click', eliminarProducto);
     }
 
     // Vaciar carrito
-    if (vaciarCarritoBtn) {
-        vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+    if (vaciarBtn) {
+        vaciarBtn.addEventListener('click', vaciarCarrito);
     }
-}
 
-function comprarElemento(e) {
+});
 
-    // Solo funciona con botones agregar-carrito
+// AGREGAR PRODUCTOS
+function agregarProducto(e) {
+
     if (e.target.classList.contains('agregar-carrito')) {
 
         e.preventDefault();
 
-        // Busca la tarjeta correcta
-        const elemento = e.target.closest('.ofert-1, .producto-card');
+        const producto = e.target.closest('.ofert-1, .producto-card');
 
-        if (elemento) {
-            leerDatosElemento(elemento);
-        }
+        leerDatosProducto(producto);
     }
 }
 
-function leerDatosElemento(elemento) {
+// LEER DATOS
+function leerDatosProducto(producto) {
 
     let titulo = '';
 
-    // Detecta si usa h2 o h3
-    if (elemento.querySelector('h2')) {
-
-        titulo = elemento.querySelector('h2').textContent;
-
-    } else if (elemento.querySelector('h3')) {
-
-        titulo = elemento.querySelector('h3').textContent;
+    if (producto.querySelector('h2')) {
+        titulo = producto.querySelector('h2').textContent;
     }
 
-    const infoElemento = {
+    if (producto.querySelector('h3')) {
+        titulo = producto.querySelector('h3').textContent;
+    }
 
-        imagen: elemento.querySelector('img').src,
+    const infoProducto = {
+
+        imagen: producto.querySelector('img').src,
 
         titulo: titulo,
 
-        precio: elemento.querySelector('.precio').textContent,
+        precio: producto.querySelector('.precio').textContent,
 
-        id: elemento.querySelector('.agregar-carrito').getAttribute('data-id')
+        id: producto.querySelector('.agregar-carrito').getAttribute('data-id')
     };
 
-    insertarCarrito(infoElemento);
+    insertarCarrito(infoProducto);
 }
 
-function insertarCarrito(elemento) {
+// INSERTAR EN CARRITO
+function insertarCarrito(producto) {
 
     const row = document.createElement('tr');
 
     row.innerHTML = `
         <td>
-            <img src="${elemento.imagen}" width="80">
+            <img src="${producto.imagen}" width="70">
         </td>
 
         <td>
-            ${elemento.titulo}
+            ${producto.titulo}
         </td>
 
         <td>
-            ${elemento.precio}
+            ${producto.precio}
         </td>
 
         <td>
-            <a href="#" class="borrar" data-id="${elemento.id}">X</a>
+            <a href="#" class="borrar" data-id="${producto.id}">
+                X
+            </a>
         </td>
     `;
 
-    lista.appendChild(row);
+    listaCarrito.appendChild(row);
 }
 
-function eliminarElemento(e) {
+// ELIMINAR PRODUCTO
+function eliminarProducto(e) {
 
     if (e.target.classList.contains('borrar')) {
 
         e.preventDefault();
 
-        const producto = e.target.closest('tr');
+        const fila = e.target.closest('tr');
 
-        if (producto) {
-            producto.remove();
-        }
+        fila.remove();
     }
 }
 
+// VACIAR CARRITO
 function vaciarCarrito(e) {
 
     e.preventDefault();
 
-    // Limpia completamente el carrito
-    lista.innerHTML = '';
+    listaCarrito.innerHTML = '';
 }
