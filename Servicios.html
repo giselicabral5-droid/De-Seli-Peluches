@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | De Peluches Seli</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    .servicios {
+        padding: 100px 0;
+        background-color: #F7F7F7;
+    }
+
+    .logo img{
+    width: 90px;
+}
+
+    .servicios-titulo {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .servicios-titulo h1 {
+        font-size: 70px;
+        color: #181818;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .servicios-titulo span {
+        color: #ff3C2A;
+    }
+
+    .servicios-titulo p {
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+    }
+
+    .servicios-content {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+    }
+
+    .servicio-box {
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .servicio-box:hover {
+        transform: translateY(-10px);
+    }
+
+    .servicio-box img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+
+    .servicio-box h3 {
+        font-size: 28px;
+        color: #ff3C2A;
+        margin-bottom: 15px;
+    }
+
+    .servicio-box p {
+        line-height: 1.7;
+    }
+
+    .extra-servicio {
+        margin-top: 80px;
+        background: linear-gradient(
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+        ),
+        url(Imagenes/muchos\ peluches.jpg);
+
+        background-position: center;
+        background-size: cover;
+        border-radius: 25px;
+        padding: 60px;
+        text-align: center;
+    }
+
+    .extra-servicio h2 {
+        color: #FFFFFF;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .extra-servicio p {
+        color: #FFFFFF;
+        max-width: 700px;
+        margin: 0 auto 30px auto;
+        line-height: 1.8;
+    }
+
+    .redes {
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .redes h3 {
+        font-size: 40px;
+        color: #181818;
+        margin-bottom: 20px;
+    }
+
+    .redes span {
+        color: #ff3C2A;
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    @media(max-width:991px){
+
+        .servicios {
+            padding: 30px;
+        }
+
+        .servicios-titulo h1 {
+            font-size: 50px;
+        }
+
+        .servicios-content {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        .extra-servicio {
+            padding: 35px;
+        }
+
+        .extra-servicio h2 {
+            font-size: 35px;
+        }
+    }
+    
+       .header{
+    min-height: auto !important;
+    padding: 0 !important;
+}
+
+.menu{
+    position: relative !important;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="menu container">
+
+        <a href="index.html" class="logo">
+    <img src="Imagenes/LOGO.png" alt="Logo">
+</a>
+
+        <input type="checkbox" id="menu">
+
+        <label for="menu">
+            <img src="Imagenes/menu.png" class="menu-icono" alt="">
+        </label>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="Servicio.html">Servicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<section class="servicios">
+
+    <div class="container">
+
+        <div class="servicios-titulo">
+
+            <h1>Nuestros <span>Servicios</span></h1>
+
+            <p>
+                En De Peluches Seli ofrecemos hermosos peluches,
+                delivery rápido y productos suaves y de excelente calidad
+                para todas las edades.
+            </p>
+
+        </div>
+
+        <div class="servicios-content">
+
+            <div class="servicio-box">
+
+                <img src="Imagenes/Delibery.jpg" alt="">
+
+                <h3>Delivery</h3>
+
+                <p>
+                    Realizamos entregas rápidas y seguras
+                    para que recibas tus peluches favoritos
+                    desde la comodidad de tu hogar.
+                </p>
+
+            </div>
+
+            <div class="servicio-box">
+
+                <img src="Imagenes/Stitch con pato 8.jpg" alt="">
+
+                <h3>Peluches Premium</h3>
+
+                <p>
+                    Contamos con peluches suaves,
+                    cómodos y de excelente calidad
+                    para niños y coleccionistas.
+                </p>
+
+            </div>
+
+            <div class="servicio-box">
+
+                <img src="Imagenes/Vaquita peluche marron 13.jpg" alt="">
+
+                <h3>Pedidos Especiales</h3>
+
+                <p>
+                    Puedes elegir personajes, tamaños
+                    y diseños especiales según tus gustos
+                    o para regalar.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="extra-servicio">
+
+            <h2>Los mejores peluches para regalar</h2>
+
+            <p>
+                Nuestro objetivo es brindar felicidad,
+                ternura y diversión con productos bonitos,
+                cómodos y de excelente calidad.
+            </p>
+
+            <a href="Productos.html" class="btn-2">Ver Productos</a>
+
+        </div>
+
+        <div class="redes">
+
+            <h3>Síguenos y conoce más peluches</h3>
+
+            <p>
+                Descubre nuevos productos, promociones
+                y peluches adorables en nuestras redes sociales.
+            </p>
+
+            <br>
+
+            <span>@DePeluchesSeli</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

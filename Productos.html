@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | De Peluches Seli</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    .productos {
+        padding: 100px 0;
+        background-color: #F7F7F7;
+    }
+
+    .logo img{
+        width: 90px;
+    }
+
+    #img-carrito{
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .productos-titulo {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .productos-titulo h1 {
+        font-size: 70px;
+        color: #181818;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .productos-titulo span {
+        color: #ff3C2A;
+    }
+
+    .productos-titulo p {
+        font-size: 18px;
+        color: #4b4b4b;
+    }
+
+    .productos-content {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+    }
+
+    .producto-card {
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .producto-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .producto-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+
+    .producto-card h2 {
+        font-size: 28px;
+        color: #181818;
+        margin-bottom: 10px;
+    }
+
+    .precio {
+        color: #ff3C2A;
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .producto-card p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .producto-extra {
+        background: linear-gradient(
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2)
+        ),
+        url(Imagenes/muchos\ peluches.jpg);
+
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        color: #FFFFFF;
+        grid-column: span 3;
+    }
+
+    .producto-extra h2 {
+        color: #FFFFFF;
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .producto-extra p {
+        color: #FFFFFF;
+        margin-bottom: 25px;
+    }
+
+    @media(max-width:991px){
+
+        .productos {
+            padding: 30px;
+        }
+
+        .productos-titulo h1 {
+            font-size: 50px;
+        }
+
+        .productos-content {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        .producto-extra {
+            grid-column: span 1;
+        }
+    }
+       .header{
+    min-height: auto !important;
+    padding: 0 !important;
+}
+
+.menu{
+    position: relative !important;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="menu container">
+
+        <a href="index.html" class="logo">
+            <img src="Imagenes/LOGO.png" alt="Logo">
+        </a>
+
+        <input type="checkbox" id="menu">
+
+        <label for="menu">
+            <img src="Imagenes/menu.png" class="menu-icono" alt="">
+        </label>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="Servicios.html">Servicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <ul>
+                <li class="submenu">
+
+                    <img src="Imagenes/car.svg" id="img-carrito" alt="carrito">
+
+                    <div id="carrito">
+
+                        <table id="lista-carrito">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody></tbody>
+
+                        </table>
+
+                        <a href="#" id="vaciar-carrito" class="btn-2">
+                            Vaciar carrito
+                        </a>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</header>
+
+<section class="productos" id="lista-2">
+
+    <div class="container">
+
+        <div class="productos-titulo">
+
+            <h1>Nuestros <span>Peluches</span></h1>
+
+            <p>
+                Descubre los peluches más tiernos, suaves y adorables
+                para regalar o coleccionar.
+            </p>
+
+        </div>
+
+        <div class="productos-content">
+
+            <div class="producto-card">
+
+                <img src="Imagenes/Hello kity 16.jpg" alt="">
+
+                <h2>Hello Kitty</h2>
+
+                <div class="precio">RD$400</div>
+
+                <p>
+                    Hermoso peluche suave y cómodo,
+                    perfecto para decorar o abrazar.
+                </p>
+
+                <a href="#" class="agregar-carrito btn-1" data-id="1">
+                    Comprar
+                </a>
+
+            </div>
+
+            <div class="producto-card">
+
+                <img src="Imagenes/Stitch rosado 12.jpg" alt="">
+
+                <h2>Stitch Rosado</h2>
+
+                <div class="precio">RD$150</div>
+
+                <p>
+                    Peluche adorable y divertido
+                    con materiales suaves y resistentes.
+                </p>
+
+                <a href="#" class="agregar-carrito btn-1" data-id="2">
+                    Comprar
+                </a>
+
+            </div>
+
+            <div class="producto-card">
+
+                <img src="Imagenes/Dinosaurio verde 15.jpg" alt="">
+
+                <h2>Dinosaurio</h2>
+
+                <div class="precio">RD$60</div>
+
+                <p>
+                    Ideal para niños y amantes
+                    de los dinosaurios de peluche.
+                </p>
+
+                <a href="#" class="agregar-carrito btn-1" data-id="3">
+                    Comprar
+                </a>
+
+            </div>
+
+            <div class="producto-card">
+
+                <img src="Imagenes/Hombre araña 18.jpg" alt="">
+
+                <h2>Hombre Araña</h2>
+
+                <div class="precio">RD$100</div>
+
+                <p>
+                    Peluche inspirado en tu héroe favorito,
+                    cómodo y de excelente calidad.
+                </p>
+
+                <a href="#" class="agregar-carrito btn-1" data-id="4">
+                    Comprar
+                </a>
+
+            </div>
+
+            <div class="producto-card">
+
+                <img src="Imagenes/Loston 11.jpg" alt="">
+
+                <h2>Peluche Loston</h2>
+
+                <div class="precio">RD$900</div>
+
+                <p>
+                    Diseño especial y exclusivo,
+                    perfecto para coleccionar.
+                </p>
+
+                <a href="#" class="agregar-carrito btn-1" data-id="5">
+                    Comprar
+                </a>
+
+            </div>
+
+            <div class="producto-card">
+
+                <img src="Imagenes/Ositos carñosiros 7.jpg" alt="">
+
+                <h2>Osito Suerte</h2>
+
+                <div class="precio">RD$150</div>
+
+                <p>
+                    Tierno osito verde inspirado
+                    en los ositos cariñositos.
+                </p>
+
+                <a href="#" class="agregar-carrito btn-1" data-id="6">
+                    Comprar
+                </a>
+
+            </div>
+
+            <div class="producto-extra">
+
+                <h2>Los mejores peluches para ti</h2>
+
+                <p>
+                    En De Peluches Seli tenemos gran variedad
+                    de peluches bonitos, suaves y de excelente calidad.
+                </p>
+
+                <a href="Servicios.html" class="btn-2">Ver Servicios</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

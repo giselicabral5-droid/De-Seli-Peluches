@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | De Peluches Seli</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    .inicio {
+        padding: 100px 0;
+        background-color: #F7F7F7;
+    }
+
+    .inicio-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .inicio-txt {
+        flex-basis: 50%;
+    }
+
+    .inicio-txt h1 {
+        font-size: 70px;
+        line-height: 1;
+        color: #181818;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+
+    .inicio-txt span {
+        color: #ff3C2A;
+    }
+
+    .inicio-txt p {
+        font-size: 18px;
+        color: #4b4b4b;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .inicio-box {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+    }
+.logo img{
+    width: 90px;
+}
+    .box {
+        background-color: #FFFFFF;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        text-align: center;
+        flex: 1;
+    }
+
+    .box h3 {
+        color: #ff3C2A;
+        margin-bottom: 10px;
+    }
+
+    .box p {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .inicio-img {
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    .inicio-img img {
+        width: 400px;
+    }
+
+    @media(max-width:991px){
+
+        .inicio {
+            padding: 30px;
+        }
+
+        .inicio-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .inicio-txt h1 {
+            font-size: 50px;
+        }
+
+        .inicio-box {
+            flex-direction: column;
+        }
+
+        .inicio-img img {
+            width: 100%;
+        }
+
+    }
+    .header{
+    min-height: auto !important;
+    padding: 0 !important;
+}
+
+.menu{
+    position: relative !important;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="menu container">
+
+        <a href="index.html" class="logo">
+    <img src="Imagenes/LOGO.png" alt="Logo">
+</a>
+
+        <input type="checkbox" id="menu">
+
+        <label for="menu">
+            <img src="Imagenes/menu.png" class="menu-icono" alt="">
+        </label>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="Servicios.html">Servicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<section class="inicio">
+
+    <div class="inicio-content container">
+
+        <div class="inicio-txt">
+
+            <h1>Bienvenidos a <span>De Peluches Seli</span></h1>
+
+            <p>
+                En De Peluches Seli encontrarás los mejores peluches,
+                suaves, bonitos y de excelente calidad para regalar,
+                decorar o coleccionar.
+            </p>
+
+            <p>
+                Tenemos ositos cariñositos, Stitch, Hello Kitty,
+                dinosaurios, personajes divertidos y muchos más,
+                siempre al mejor precio y con diseños adorables.
+            </p>
+
+            <a href="Productos.html" class="btn-1">Ver Productos</a>
+
+            <div class="inicio-box">
+
+                <div class="box">
+                    <h3>Misión</h3>
+                    <p>Brindar felicidad con peluches de calidad.</p>
+                </div>
+
+                <div class="box">
+                    <h3>Visión</h3>
+                    <p>Ser una tienda reconocida por sus hermosos peluches.</p>
+                </div>
+
+                <div class="box">
+                    <h3>Valores</h3>
+                    <p>Amabilidad, calidad, confianza y creatividad.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="inicio-img">
+            <img src="Imagenes/LOGO.png" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
