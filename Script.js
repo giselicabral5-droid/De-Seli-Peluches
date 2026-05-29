@@ -13,7 +13,7 @@ function cargarEventListeners() {
         elementos1.addEventListener('click', comprarElemento);
     }
 
-    // Productos de productos.html
+    // Productos de Productos.html
     if (elementos2) {
         elementos2.addEventListener('click', comprarElemento);
     }
@@ -31,14 +31,17 @@ function cargarEventListeners() {
 
 function comprarElemento(e) {
 
-    // SOLO bloquea el link si es agregar carrito
+    // Solo funciona con botones agregar-carrito
     if (e.target.classList.contains('agregar-carrito')) {
 
         e.preventDefault();
 
+        // Busca la tarjeta correcta
         const elemento = e.target.closest('.ofert-1, .producto-card');
 
-        leerDatosElemento(elemento);
+        if (elemento) {
+            leerDatosElemento(elemento);
+        }
     }
 }
 
@@ -46,18 +49,24 @@ function leerDatosElemento(elemento) {
 
     let titulo = '';
 
+    // Detecta si usa h2 o h3
     if (elemento.querySelector('h2')) {
+
         titulo = elemento.querySelector('h2').textContent;
-    } 
-    
-    else if (elemento.querySelector('h3')) {
+
+    } else if (elemento.querySelector('h3')) {
+
         titulo = elemento.querySelector('h3').textContent;
     }
 
     const infoElemento = {
+
         imagen: elemento.querySelector('img').src,
+
         titulo: titulo,
+
         precio: elemento.querySelector('.precio').textContent,
+
         id: elemento.querySelector('.agregar-carrito').getAttribute('data-id')
     };
 
@@ -95,9 +104,11 @@ function eliminarElemento(e) {
 
         e.preventDefault();
 
-        const producto = e.target.parentElement.parentElement;
+        const producto = e.target.closest('tr');
 
-        producto.remove();
+        if (producto) {
+            producto.remove();
+        }
     }
 }
 
@@ -105,7 +116,6 @@ function vaciarCarrito(e) {
 
     e.preventDefault();
 
-    while (lista.firstChild) {
-        lista.removeChild(lista.firstChild);
-    }
+    // Limpia completamente el carrito
+    lista.innerHTML = '';
 }
